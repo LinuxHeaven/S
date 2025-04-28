@@ -1,0 +1,146 @@
+Here is the combined list of questions and their answers with the corresponding index numbers:
+
+**Lab 3**  
+34. **Display the pathname to the current directory**  
+   Answer: `$pwd`  
+
+35. **Create the following file structure under your home directory**  
+   Answer:  
+   ```bash
+   $mkdir THA
+   $mkdir THA/BCA THA/BBA THA/BCA/BCA1 THA/BCA/BCA3 THA/BCA/BCA5 THA/BBA/BBA1 THA/BBA/BBA3 THA/BBA/BBA5
+   $mkdir THA/BCA/BCA1/BCA1A THA/BCA/BCA1/BCA1B
+   $mkdir THA/BCA/BCA3/BCA3A THA/BCA/BCA3/BCA3B
+   $mkdir THA/BCA/BCA5/BCA5A THA/BCA/BCA5/BCA5B
+   $mkdir THA/BBA/BBA1/BBA1A THA/BBA/BBA1/BBA1B
+   $mkdir THA/BBA/BBA3/BBA3A THA/BBA/BBA3/BBA3B
+   $mkdir THA/BBA/BBA5/BBA5A THA/BBA/BBA5/BBA5B
+   ```
+
+**Lab 4**  
+36. **Create ordinary files in BCASA or BCA5B**  
+   Answer:  
+   ```bash
+   $cd THA/BCA/BCA5/BCA5A
+   $gedit dept.Ist
+   01:accounts:6213
+   02:admin:5423
+   
+   $gedit emp.Ist
+   0001|Dipankar Das|teacher|THA
+   0002|Parichay Chakraborty|teacher|THA
+   0003|Arnab Kole|teacher|THA
+   0004|Joydeep Das|teacher|THA
+   0005|Bratin Maity|teacher|THA
+   0006|Somnath Bhattacharya|teacher|THA
+   
+   $gedit addressbook
+   dd dd@test.com 1111100001
+   pc pc@test.com 1111100002
+   
+   $gedit file1
+   5 2
+   10 1
+   ```
+
+37. **Navigate to BCA1A from your home directory - Practice both absolute and relative pathname**  
+   Answer:  
+   Absolute pathname: `$cd /home/rahul/THA/BCA/BCA1/BCA1A`  
+   Relative pathname: `$cd THA/BCA/BCA1/BCA1A`  
+
+38. **Go to your home from BCA1A**  
+   Answer: `$cd ~`  
+
+39. **Navigate to BCA1A and from there go to BCA5A or BCA5B using both absolute and relative pathname**  
+   Answer:  
+   Absolute pathname: `$cd /home/rahul/THA/BCA/BCA5/BCA5A`  
+   Relative pathname: `$cd THA/BCA/BCA5/BCA5A`  
+
+40. **Create a directory 'test' under BCA1A, create a file 'text' under it, and remove the directory 'test'**  
+   Answer:  
+   ```bash
+   $mkdir test
+   $cd test
+   $touch text
+   $cd ..
+   $rm -R test/
+   ```
+
+**Lab 5**  
+41. **Navigate to BBA1A from BCA1A using .. (dot dot)**  
+   Answer: `$cd /home/rahul/THA/BCA/BCA1/BCA1A $cd ../../../../BBA/BBA1/BBA1A`  
+
+42. **Show an example of the use of . (dot)**  
+   Answer: `$cd ./BCA1A`  
+
+43. **List file's type and inode number**  
+   Answer: `$ls -i`  
+
+44. **List a particular directory's content**  
+   Answer: `$ls THA`  
+
+45. **Display the content of THA in recursive manner**  
+   Answer: `$ls -R THA`  
+
+46. **Display the hidden file**  
+   Answer: `$ls -a`  
+
+47. **Display the name of the current directory**  
+   Answer: `$pwd`  
+
+48. **Long list the directory THA and explain the output**  
+   Answer:  
+   ```bash
+   $ls -l THA
+   ```
+   Explanation:  
+   - `type of file` (directory in current state)  
+   - `permission set for owner, groups, and others`  
+   - `number of links to file`  
+   - `owner of the directory`  
+   - `group owner`  
+   - `size in units`  
+   - `last time and date modified`  
+   - `name`  
+
+49. **Display the content of dept.Ist**  
+   Answer: `$cat dept.Ist`  
+
+50. **Display the content of dept.Ist and emp.Ist**  
+   Answer: `$cat dept.Ist && cat emp.Ist`  
+
+51. **Create a directory BCA5_Backup under BCASA or BCA5B**  
+   Answer: `$mkdir BCA5_Backup`  
+
+**Lab 6**  
+52. **Copy all the ordinary files from BCASA or BCA5B into BCA5_Backup**  
+   Answer: `$cp addressbook dept.lst emp.Ist file1 ./BCA5_Backup/`  
+
+53. **Create a file chap1 and directory progs under your home directory - Explain the cp command outcomes**  
+   Answer:  
+   ```bash
+   $mkdir progs && touch chap1
+   ```
+   - `$cp chap1 progs/unit1`: chap1 gets copied inside progs as unit1.  
+   - `$cp chap1 progs`: chap1 gets copied inside progs.  
+
+54. **Create chap2 and chap3 under your home directory and copy chap1, chap2, chap3 into BCA5A or BCA5B using a single command**  
+   Answer:  
+   ```bash
+   $touch chap2 chap3
+   $cp chap1 chap2 chap3 ./THA/BCA/BCA5/BCA5A
+   ```
+
+55. **What happens when you use cp -R progs newprogs from your home directory?**  
+   Answer:  
+   - If `newprogs` does not exist: It is created with the contents of `progs`.  
+   - If `newprogs` exists: The directory `progs` is copied inside `newprogs`.  
+
+56. **Delete chap1, chap2, and chap3 from BCA5A or BCA5B**  
+   Answer:  
+   ```bash
+   $cd THA/BCA/BCA5/BCA5A
+   $rm chap1 chap2 chap3
+   ```
+
+Let me know if you'd like further clarification or assistance with any part of the lab manual!
